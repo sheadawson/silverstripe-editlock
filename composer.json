@@ -1,0 +1,26 @@
+{
+	"name": "sheadawson/silverstripe-editlock",
+	"description": "Prevents a CMS user from editing a record that another CMS user is currently editing",
+	"type": "silverstripe-module",
+	"keywords": ["silverstripe", "edit", "lock", "checkout"],
+	"license": "BSD License",
+	"homepage": "http://github.com/sheadawson/silverstripe-editlock",
+	"authors": [
+	{
+		"name": "Shea Dawson",
+		"email": "shea@silverstripe.com.au"
+	}
+	],
+
+	"require":
+	{
+		"silverstripe/framework": "~3.1",
+		"composer/installers": "*"
+	},
+	"support": {
+		"issues": "https://github.com/sheadawson/silverstripe-editlock/issues"
+	},
+	"extra": {
+		"installer-name": "editlock"
+	}
+}

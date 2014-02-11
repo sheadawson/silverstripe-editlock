@@ -1,0 +1,8 @@
+LeftAndMain:
+  extensions:
+    - EditLockControllerExtension
+  extra_requirements_javascript:
+    - 'editlock/javascript/editlock.js'
+GridFieldDetailForm_ItemRequest:
+  extensions:
+    - EditLockControllerExtension
