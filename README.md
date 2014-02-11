@@ -12,13 +12,13 @@
 
 Prevents a CMS user from editing a record that another CMS user is currently editing, to avoid change conflicts/data loss.  
 
-## Screenshot
-
 ![Screenshot](https://raw.github.com/sheadawson/silverstripe-editlock/master/images/screenshot.png) 
 
 ## Installation
 
 Download this module into the root of your project. The module folder must be named "editlock". Run dev/build.
+
+Composer: require "sheadawson/silverstripe-editlock": "dev-master"
 
 ## Usage
 
