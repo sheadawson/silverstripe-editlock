@@ -1,10 +1,15 @@
 jQuery.entwine("editlock", function($) {
-
+	var lockTimer = 0;
 	$('.cms-edit-form').entwine({
 		RecordID: null,
 		RecordClass: null,
 		LockURL: null,
 		onmatch: function() {
+			// clear any previously bound lock timer
+			if (lockTimer) {
+				clearTimeout(lockTimer);
+			}
+
 			if(this.hasClass('edit-locked')){
 				this.showLockMessage();
 			}else{
@@ -14,19 +19,19 @@ jQuery.entwine("editlock", function($) {
 				this.lockRecord();	
 			}
 		},
-
+		
 		lockRecord: function() {
 			if(!this.getRecordID() || !this.getRecordClass() || !this.getLockURL()){
 				return false;
 			}
-
+			
 			var data = { 
 				RecordID: this.getRecordID(), 
 				RecordClass: this.getRecordClass() 
 			};
 
 			$.post(this.getLockURL(), data).done(function(result){
-				setTimeout(function(){$('.cms-edit-form').lockRecord()},10000);
+				lockTimer = setTimeout(function(){$('.cms-edit-form').lockRecord()},10000);
 			});
 		},
 
