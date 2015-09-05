@@ -18,7 +18,9 @@ Prevents a CMS user from editing a record that another CMS user is currently edi
 
 Download this module into the root of your project. The module folder must be named "editlock". Run dev/build.
 
-Composer: require "sheadawson/silverstripe-editlock": "dev-master"
+```
+Composer: require "sheadawson/silverstripe-editlock": "1.0.x"
+```
 
 ## Usage
 
