@@ -26,9 +26,4 @@ The module will take effect on any DataObject's standard CMS edit form out of th
  
 ## Edit anyway override
 
-Users with the "edit anyway" permission are given the option to override the lock and edit the record anyway, after being made aware of the risks. This permission can be applied to user groups in the Security section of the CMS. 
-
-## This is freshly baked...
-
-This is a pretty new module, it's working a treat so far but if you do come across any issues please let me know.
-
+Users with the "edit anyway" permission are given the option to override the lock and edit the record anyway, after being made aware of the risks. This permission can be applied to user groups in the Security section of the CMS.
