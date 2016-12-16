@@ -36,7 +36,7 @@ class EditLockControllerExtension extends Extension
         if ($beingEdited) {
             if ($this->owner->getRequest()->getVar('editanyway') == '1') {
                 $beingEdited->isEditingAnyway();
-                return $this->owner->redirectBack();
+                return Controller::curr()->redirectBack();
             }
             // if the RecordBeingEdited record has not been updated in the last 15 seconds (via ping)
             // the person editing it must have left the edit form, so delete the RecordBeingEdited
