@@ -25,6 +25,15 @@ Composer: require "sheadawson/silverstripe-editlock": "1.0.x"
 ## Usage
 
 The module will take effect on any DataObject's standard CMS edit form out of the box. A locked object will display a readonly version of the edit form and a message explaining why it's locked and who is editing it. Editing will be re-enabled a maximum of 15 seconds after the original editor has navigated away from the edit form.
+
+If you need to restrict locking to only specific data classes, you can specify these in your yml config as below.
+
+```
+EditLockControllerExtension:
+  lockedClasses:
+    - 'BlogPost'
+    - 'Article'
+ ```
  
 ## Edit anyway override
 
