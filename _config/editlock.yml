@@ -6,3 +6,5 @@ LeftAndMain:
 GridFieldDetailForm_ItemRequest:
   extensions:
     - EditLockControllerExtension
+EditLockControllerExtension:
+  lockedClasses:
