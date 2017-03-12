@@ -11,7 +11,10 @@ class EditLockControllerExtension extends Extension
     private static $allowed_actions = array(
         'lock'
     );
-
+    
+    
+    private static $lockedClasses = array();
+    
 
     /**
      * Updtes the edit form based on whether it is being edited or not
@@ -24,6 +27,14 @@ class EditLockControllerExtension extends Extension
         // if the current user can't edit the record anyway, we don't need to do anything
         if ($record && !$record->canEdit()) {
             return $form;
+        }
+        
+        // check if all classes should be locked by default or a certain list
+        $lockedClasses = Config::inst()->get('EditLockControllerExtension', 'lockedClasses');
+        if (!empty($lockedClasses)) {
+            if (!in_array($record->ClassName, $lockedClasses)) {
+                return $form;
+            }
         }
 
         // check if this record is being edited by another user
