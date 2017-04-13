@@ -3,5 +3,5 @@ fr:
     LOCKEDMESSAGE: "Désolé, cette %s est actuellement en cours d'édition par %s. Pour éviter les conflits et la perte de données, l'édition sera verrouillée jusqu'à ce qu'ils soient terminés."
     EDITANYWAY: 'Je comprends les risques, %s éditer de toute façon %s.'
     PERMISSION_EDITANYWAY_DESCRIPTION: "Modifier un enregistrement qu'un autre utilisateur édite."
-    PERMISSION_EDITANYWAY_HELP: "Laissez l'utilisateur annuler le verrouillage d'édition et l'avertissement.",
+    PERMISSION_EDITANYWAY_HELP: "Laissez l'utilisateur annuler le verrouillage d'édition et l'avertissement."
     PERMISSION_EDITANYWAY_CATEGORY: 'Autorisations de contenu'
